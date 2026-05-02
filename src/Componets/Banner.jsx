@@ -29,6 +29,10 @@ export const Banner = () => {
         !password ? setPasswordError("Please Enter a Valid Password") : setPasswordError("");
         
     }
+    const handleSubmit = () => {
+        console.log("");
+    }    
+        
     
 
 
@@ -39,7 +43,7 @@ export const Banner = () => {
   return (
     <div className="mt-20">
         
-        <form className="max-w-sm mx-auto">
+        <form className="max-w-sm mx-auto" onSubmit={handleClick}>
         <div className="mb-5">
             <label htmlFor="email" className="block mb-2.5 text-sm font-medium text-heading">Your email</label>
             <input type="email" id="email" className="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body" placeholder="name@flowbite.com"  onChange={handleEmail}/>
